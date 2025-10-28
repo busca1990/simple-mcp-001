@@ -28,6 +28,8 @@ def multiply(a: int, b: int) -> int:
     """Multiply two numbers"""
     return a * b
 
+# 在 main 函数中添加 host 参数以便外部访问
+@mcp.run(transport="sse", host="0.0.0.0", port=5050)
 def main() -> int:
     logging.info("正在初始化MCP演示服务")
     #启动SSE
